@@ -35,29 +35,29 @@ export default function BMIHistory({ records }: BMIHistoryProps) {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {records.map((record) => {
-            let statusColor = "text-gray-900";
+          {records.map((record, index) => {
+            let statusColor = "bg-gray-100 text-gray-800";
             let statusText = "";
 
             if (record.bmi_value < 18.5) {
               statusText = "Underweight";
-              statusColor = "text-blue-600";
+              statusColor = "bg-blue-100 text-blue-800";
             } else if (record.bmi_value < 23) {
               statusText = "Normal";
-              statusColor = "text-green-600";
+              statusColor = "bg-green-100 text-green-800";
             } else if (record.bmi_value < 25) {
               statusText = "Overweight";
-              statusColor = "text-yellow-600";
+              statusColor = "bg-yellow-100 text-yellow-800";
             } else if (record.bmi_value < 30) {
               statusText = "Obese L1";
-              statusColor = "text-orange-600";
+              statusColor = "bg-orange-100 text-orange-800";
             } else {
               statusText = "Obese L2";
-              statusColor = "text-red-600";
+              statusColor = "bg-red-100 text-red-800";
             }
 
             return (
-              <tr key={record.id}>
+              <tr key={record.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {new Date(record.recorded_at).toLocaleDateString()}
                 </td>
@@ -67,8 +67,10 @@ export default function BMIHistory({ records }: BMIHistoryProps) {
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   {record.bmi_value.toFixed(2)}
                 </td>
-                <td className={`px-6 py-4 whitespace-nowrap text-sm font-medium ${statusColor}`}>
-                  {statusText}
+                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                  <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColor}`}>
+                    {statusText}
+                  </span>
                 </td>
               </tr>
             );

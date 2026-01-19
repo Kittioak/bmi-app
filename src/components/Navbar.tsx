@@ -9,12 +9,15 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-blue-600">BMI Tracker</span>
+            <Link href="/" className="flex-shrink-0 flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                 <span className="text-white font-bold text-lg">B</span>
+              </div>
+              <span className="text-2xl font-extrabold text-gray-900 tracking-tight">BMI<span className="text-blue-600">Tracker</span></span>
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
