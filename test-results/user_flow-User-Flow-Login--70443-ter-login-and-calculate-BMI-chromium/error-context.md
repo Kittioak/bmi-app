@@ -1,0 +1,56 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "B BMITracker" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]: B
+          - generic [ref=e10]: BMITracker
+        - generic [ref=e11]:
+          - link "Dashboard" [ref=e12] [cursor=pointer]:
+            - /url: /dashboard
+          - generic [ref=e13]: Hi, Test User 4482
+          - button "Sign Out" [ref=e14]
+    - main [ref=e15]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - heading "Dashboard" [level=1] [ref=e20]
+            - paragraph [ref=e21]: Track your health journey
+          - generic [ref=e23]: Test User 4482
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - heading "Calculate BMI" [level=2] [ref=e27]
+              - generic [ref=e28]:
+                - generic [ref=e29]:
+                  - generic [ref=e30]:
+                    - generic [ref=e31]: Weight (kg)
+                    - spinbutton [ref=e32]: "70"
+                  - generic [ref=e33]:
+                    - generic [ref=e34]: Height (cm)
+                    - spinbutton [ref=e35]: "175"
+                - button "Calculate" [ref=e37]
+            - generic [ref=e38]:
+              - heading "Did you know?" [level=3] [ref=e39]
+              - paragraph [ref=e40]: Keeping your BMI within 18.5 - 24.9 significantly reduces health risks.
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - heading "BMI Trend" [level=2] [ref=e44]
+                - generic [ref=e45]: Last 30 Days
+              - generic [ref=e47]: No data available. Add your first record!
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - heading "History Log" [level=2] [ref=e50]
+                - button "Refresh" [ref=e51]
+              - paragraph [ref=e52]: No records found.
+    - contentinfo [ref=e53]:
+      - paragraph [ref=e56]: "Student Number: 67162110280-1"
+  - button "Open Next.js Dev Tools" [ref=e62] [cursor=pointer]:
+    - img [ref=e63]
+  - alert [ref=e66]
+```
